@@ -31,12 +31,17 @@ namespace RegistrationService.Controllers
             return BadRequest(ModelState);
         }
 
-        //        [HttpDelete("{id}")]
-        //        public async Task<IActionResult> Delete(long id)
-        //        {
-        //            return await ExecuteCommand(command);
-        //        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(long id)
+        {
+            return await ExecuteRequest(new DeleteRequest(id));
+        }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(long id, RegisterCustomerCommand command)
+        {
+            return await ExecuteRequest(new UpdateRegistrationRequest(id,command));
+        }
 
         private async Task<IActionResult> ExecuteCommand(INotification command)
         {

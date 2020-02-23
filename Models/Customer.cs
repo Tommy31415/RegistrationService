@@ -11,7 +11,6 @@ namespace RegistrationService.Models
         public long Id { get; set; }
         [Required]
         [EnumDataType(typeof(EVendor))]
-        [JsonConverter(typeof(StringEnumConverter<,,>))]
         public EVendor Vendor { get; set; }
         [Required]
         public string FirstName { get; set; }
