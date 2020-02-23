@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using RegistrationService.Controllers;
 using RegistrationService.Data;
 using RegistrationService.Models;
 

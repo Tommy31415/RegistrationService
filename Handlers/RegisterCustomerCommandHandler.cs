@@ -1,9 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using RegistrationService.Controllers;
 using RegistrationService.Data;
-using RegistrationService.Models;
 
 namespace RegistrationService.Handlers
 {
